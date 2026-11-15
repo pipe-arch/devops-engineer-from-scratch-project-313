@@ -9,20 +9,34 @@
 
 ## Стек
 
-- Python
+- Python 3.12
+- Flask
+- uv
 
 ## Установка
-
-<!-- Опишите установку: клонирование, зависимости, переменные окружения -->
 
 ```bash
 git clone https://github.com/pipe-arch/devops-engineer-from-scratch-project-313.git
 cd devops-engineer-from-scratch-project-313
+uv sync
 ```
 
 ## Использование
 
-<!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
+Запуск приложения на порту 8080:
+
+```bash
+make run
+```
+
+В другом терминале проверяем, что приложение отвечает:
+
+```bash
+curl localhost:8080/ping
+# pong
+```
+
+Остановка - `Ctrl+C`. Без `make` приложение запускается так: `uv run python main.py`.
 
 ---
 
